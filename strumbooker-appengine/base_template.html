@@ -1,0 +1,166 @@
+<html>
+ <head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/scripts/ccharter.js"></script>
+  <script type="text/javascript" src="/scripts/ssheeter.js"></script>
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+	<style type="text/css">
+		.bg{ behavior: url(js/PIE.htc); }
+	</style>
+  <![endif]-->
+	<!--[if lt IE 7]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
+		</div>
+	<![endif]-->
+	
+  <script type="text/javascript">
+  {% block script %}{% endblock %}
+  </script>
+  <style>
+  * {
+                font-family: verdana;
+  }
+  .chord {
+                display: inline;
+                font-weight: bold;
+                font-size: 1.1em;
+                position: absolute;
+  }
+  .chordChart {
+  	display: inline;
+  }
+  .chordWrapper {
+                position: relative;
+                top: -15px;
+  }
+  div.songsheet {
+                line-height: 35px;
+  }
+  body {
+  	background-color: #eee;
+  }
+  #content {
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 900px;
+  	background-color: white;
+  	padding: 30px;
+  }
+  h1 {
+  	margin-bottom: 0px;
+  	padding-bottom: 0px;
+  }
+  h2 {
+  	margin-top: 0px;
+  }
+  .charts {
+  	display: block;
+  }
+  ul.form {
+  	list-style: none;
+  	padding-left: 0px;
+  }
+  ul.form li {
+  	margin-top: 20px;
+  }
+  ul.form li label {
+  	display: block;
+  }
+  #header {
+  	background-color: black;
+  }
+  .content {
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 900px;
+  	color: black;
+  }
+  .content {
+  	padding-top: 40px;
+  	padding-bottom: 40px;
+  }
+  .content input {
+  	border: 1px solid black;
+  }
+  .content textarea {
+  	border: 1px solid black;
+  }
+  .content h1 {
+  	display: block;
+  	font-weight: bold;
+  	font-size: 30pt;
+  	float: none;
+  	margin-bottom: 10px;
+  }
+  
+  .content h2 {
+  	padding: 0px;
+  	font-size: 20pt;
+  }
+  
+</style>
+ </head>
+ <body id="page2">
+ 
+	<div class="body1">
+	<div class="body2">
+	<div class="body5">
+		<div class="main">
+<!-- header -->
+			<header>
+				<div class="wrapper">
+				<h1><a href="index.html" id="logo">Progress Business Company</a></h1>
+				<nav>
+					<ul id="menu">
+						<li id="nav1" class="active"><a href="/">Home<span>Welcome!</span></a></li>
+						<li id="nav2"><a href="new_book.html">Create<span>StrumBook</span></a></li>
+						<li id="nav3"><a href="books.html">My<span>StrumBooks</span></a></li>
+						<li id="nav5"><a href="/">About<span>StrumBooker</span></a></li>
+					</ul>
+				</nav>
+				</div>
+			</header><div class="ic">More Website Templates  at TemplateMonster.com!</div>
+<!-- header end-->
+		</div>
+	</div>
+	</div>
+	</div>
+  
+ 	<div class="body3">
+		<div class="main">
+		<div class="content">
+  {% block content %}{% endblock %}
+        </div>
+        </div>
+    </div>
+    
+    	<div class="body4">
+		<div class="main">
+			<article id="content2">
+				<div class="wrapper">
+					<section class="col3">
+						<h4>Help</h4>
+						<ul class="list1">
+							<li><a href="/">Really?</a></li>
+							<li><a href="/new_book.html">Create A StrumBook</a></li>
+							<li><a href="/books.html">My Books</a></li>
+						</ul>
+					</section>
+					<section class="col3 pad_left2">
+						<h4>Contact Us</h4>
+						<ul class="address">
+							<li><span>Email:</span><a href="mailto:zaril2o@yahoo.com">zaril2o@yahoo.com</a></li>
+						</ul>
+					</section>
+				</div>
+			</article>
+<!-- content end -->
+		</div>
+	</div>
+ </body>
+</html>   

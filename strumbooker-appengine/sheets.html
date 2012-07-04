@@ -1,0 +1,15 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+
+ <h1>StrumBook: {{ book.name }}</h1>
+ 
+ <p>
+ <a href="new_sheet.html?book={{ book.key }}">Create A Sheet</a>
+ </p>
+ 
+{% for sheet in sheets %}
+    <a href="/sheet.html?book={{ book.key }}&sheet={{ sheet.key }}">{{ sheet.song }} : {{ sheet.artist }}</a><br />
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "base_template.html" %}
+
+{% block script %}
+	
+	$(document).ready(function() {
+    	SongSheeter.formatSheet('songsheet');
+	});
+	
+{% endblock %}
+
+{% block content %}
+
+ <h1>Strum What?</h1>
+ <p style="padding-top: 10px; font-size: 20pt; line-height: 30pt;">
+ StrumBooker is a tool for creating and tracking guitar song sheets, called StrumSheets, and organizing those song sheets
+ into collections, called StrumBooks.
+ </p>
+
+ <img src="images/photo.jpg" title="Photographer: http://www.flickr.com/people/paipaiphotos/" />
+ <p style="text-align: right; font-size: 6pt">
+  Photo taken by <a href="http://www.flickr.com/people/paipaiphotos/">Mr Paipai</a>
+ </p>
+ 
+ <h1>How Does It Work?</h1>
+ 
+ <p style="padding-top: 10px; font-size: 20pt; line-height: 30pt;">
+ It's quite simple actually.
+ </p>
+ 
+ <p style="font-size: 14pt; line-height: 16pt;">
+  <b>1. </b>Label the song with &quot;Song:&quot;.  Like this:
+ </p>
+
+ <p style="font-family: Courier; font-size: 14pt; line-height: 16pt; padding-left: 40px;">
+  Song: <i style="font-family: Courier;">Geeetar Song</i>
+ </p>
+ 
+ <p style="font-size: 14pt; line-height: 16pt;">
+  <b>2. </b>Label the artist with &quot;Artist:&quot;. Like this:
+ </p>
+
+ <p style="font-family: Courier; font-size: 14pt; line-height: 16pt; padding-left: 40px;">
+  Artist: <i style="font-family: Courier;">Geeetar Louie</i>
+ </p>
+ 
+ <p style="font-size: 14pt; line-height: 16pt;">
+  <b>3. </b>Create chord charts with brackets.  As many as you want.  Like this:
+ </p>
+
+ <p style="font-family: Courier; font-size: 14pt; line-height: 16pt; padding-left: 40px;">
+  [G:320033]<br />
+  [D:xx0323]
+ </p>
+ 
+ <p style="font-size: 14pt; line-height: 16pt;">
+  <b>4. </b>Annotate chord changes in the lyrics with curly brackets.  Like this:
+ </p>
+
+ <p style="font-family: Courier; font-size: 14pt; line-height: 16pt; padding-left: 40px;">
+  Sing it, playa! 'till its time for a {G}chord change.<br />
+  Sing it again, playa! 'till its time for another {D}chord change.
+ </p>
+
+ <p style="font-size: 14pt; line-height: 16pt;">
+  <b>5. </b>Put it all together, and you're ready to start strumming it out:
+ </p>
+
+ <div class="songsheet" style="border: 1px solid black; padding: 20px; margin-bottom: 40px;">
+  Song:Geeetar Song
+  Artist:Geeetar Louie
+  
+  [G:320033]
+  [D:xx0323]
+  
+  Sing it, playa! 'till its time for a {G}chord change.
+  Sing it again, playa! 'till its time for another {D}chord change.
+ </div>
+
+ <h1>Anything Else?</h1>
+ 
+ <p style="padding-top: 10px; font-size: 20pt; line-height: 30pt;">
+ One last thing...
+ </p>
+ 
+ <p style="padding-top: 10px; font-size: 20pt; line-height: 30pt;">
+  Organize your StrumSheets into StrumBooks to make them easier to find.
+ </p>
+ 
+{% endblock %}

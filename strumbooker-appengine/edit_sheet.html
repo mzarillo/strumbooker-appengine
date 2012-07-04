@@ -1,0 +1,40 @@
+{% extends "base_template.html" %}
+
+{% block script %}
+	
+	$(document).ready(function() {
+    	SongSheeter.formatSheet('songsheet');
+	});
+	
+{% endblock %}
+
+{% block content %}
+
+ <h1>StrumSheet Editor</h1>
+ 
+ <h3>Formatting Guide</h3>
+ <p>
+ </p>
+ 
+ <form method="post">
+  <input type="hidden" name="book" value="{{ book.key }}" />
+  <input type="hidden" name="sheet" value="{{ sheet.key }}" />
+  <ul class="form">
+   <li>
+    <label for="artist">Artist</label>
+    <input type="text" name="artist" value="{{ sheet.artist }}" />
+   </li>
+   <li>
+    <label for="song">Song</label>
+    <input type="text" name="song" value="{{ sheet.song }}" />
+   </li>
+   <li>
+    <label for="content">Sheet</label>
+    <textarea name="content" rows="25" cols="120">{{ sheet.content }}</textarea>
+   </li>
+   <li>
+    <input type="submit" value="Submit" />
+   </li>
+  </ul>
+</form>
+{% endblock %}

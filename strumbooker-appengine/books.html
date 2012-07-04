@@ -1,0 +1,13 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+
+ <h1>My Books</h1>
+ 
+ {{ size }}
+ 
+{% for book in books %}
+    <a href="/sheets.html?book={{ book.key }}">{{ book.name }}</a><br />
+{% endfor %}
+
+{% endblock %}

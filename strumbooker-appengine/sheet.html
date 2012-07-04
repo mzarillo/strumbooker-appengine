@@ -1,0 +1,21 @@
+{% extends "base_template.html" %}
+
+{% block script %}
+	
+	$(document).ready(function() {
+    	SongSheeter.formatSheet('songsheet');
+	});
+	
+{% endblock %}
+
+{% block content %}
+
+ <p>
+  <a href="/edit_sheet.html?book={{ book.key }}&sheet={{ sheet.key }}">Edit This StrumSheet</a>
+ </p>
+
+ <div class="songsheet">
+  {{ sheet.content }}
+ </div> 
+
+{% endblock %}
