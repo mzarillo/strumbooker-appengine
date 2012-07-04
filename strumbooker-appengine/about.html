@@ -1,0 +1,31 @@
+{% extends "base_template.html" %}
+
+{% block script %}
+	
+	$(document).ready(function() {
+    	SongSheeter.formatSheet('songsheet');
+	});
+	
+{% endblock %}
+
+{% block content %}
+
+ <h1>Tools</h1>
+ <p style="padding-top: 10px; font-size: 20pt; line-height: 30pt;">
+ This website makes use of the following open-source technologies:
+ </p>
+
+ https://github.com/mzarillo/ccharter
+ 
+ <p style="padding-top: 10px; font-size: 20pt; line-height: 30pt;">
+ ChordCharter is a javascript library that creates the Guitar Chord charts. 
+ </p>
+
+ https://github.com/mzarillo/ssheeter
+ 
+ <p style="padding-top: 10px; font-size: 20pt; line-height: 30pt;">
+ SongSheeter is a javascript library that formats a song sheet based on special annotations.
+ </p>
+ 
+ 
+{% endblock %}

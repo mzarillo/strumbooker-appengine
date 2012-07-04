@@ -46,7 +46,7 @@ class BookHandler(webapp2.RequestHandler):
 			return
 		
 		path = os.path.join(os.path.dirname(__file__), 'new_book.html')
-		self.response.out.write(template.render(path, {}))
+		self.response.out.write(template.render(path, {'createSection': 'active' }))
 		
 	def post(self):
 		
@@ -78,6 +78,7 @@ class BooksHandler(webapp2.RequestHandler):
 		
 		template_params = {
 			'books': books,
+			'mySection': 'active'
 		}
 		
 		path = os.path.join(os.path.dirname(__file__), 'books.html')
@@ -102,7 +103,8 @@ class NewSheetHandler(webapp2.RequestHandler):
 			return
 		else:
 			template_values = {
-				'book': book
+				'book': book,
+				'mySection': 'active'
 	        }
 	
 			path = os.path.join(os.path.dirname(__file__), 'new_sheet.html')
@@ -157,7 +159,8 @@ class EditSheetHandler(webapp2.RequestHandler):
 				
 				template_values = {
 					'book': book,
-					'sheet': sheet
+					'sheet': sheet,
+					'mySection': 'active'
 		        }
 		
 				path = os.path.join(os.path.dirname(__file__), 'edit_sheet.html')
@@ -228,7 +231,8 @@ class SheetHandler(webapp2.RequestHandler):
 		
 			template_values = {
 				'book': book,
-				'sheet': sheet
+				'sheet': sheet,
+				'mySection': 'active'
 	        }
 	
 			path = os.path.join(os.path.dirname(__file__), 'sheet.html')
@@ -256,7 +260,8 @@ class MySheetsHandler(webapp2.RequestHandler):
 			
 			template_values = {
 				'sheets': sheets,
-				'book': book
+				'book': book,
+				'mySection': 'active'
 			}
 			
 			path = os.path.join(os.path.dirname(__file__), 'sheets.html')
@@ -266,11 +271,21 @@ class MainHandler(webapp2.RequestHandler):
 
 	def get(self):
 		path = os.path.join(os.path.dirname(__file__), 'index.html')
-		self.response.out.write(template.render(path, {}))
+		self.response.out.write(template.render(path, { 'homeSection': 'active' }))
 		
 	def post(self):
 		path = os.path.join(os.path.dirname(__file__), 'index.html')
-		self.response.out.write(template.render(path, {}))
+		self.response.out.write(template.render(path, {'mySection': 'active'}))
+		
+class AboutHandler(webapp2.RequestHandler):
+
+	def get(self):
+		path = os.path.join(os.path.dirname(__file__), 'about.html')
+		self.response.out.write(template.render(path, { 'aboutSection': 'active'}))
+		
+	def post(self):
+		path = os.path.join(os.path.dirname(__file__), 'about.html')
+		self.response.out.write(template.render(path, { 'aboutSection': 'active'}))
 		
 app = webapp2.WSGIApplication([
 							('/', MainHandler), 
@@ -280,7 +295,8 @@ app = webapp2.WSGIApplication([
 							('/sheet.html', SheetHandler),
 							('/new_book.html', BookHandler),
 							('/edit_sheet.html', EditSheetHandler),
-							('/books.html', BooksHandler)
+							('/books.html', BooksHandler),
+							('/about.html', AboutHandler)
 							],
                               debug=True)
 
