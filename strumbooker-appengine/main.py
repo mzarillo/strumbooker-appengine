@@ -31,7 +31,7 @@ class Sheet(db.Model):
 	author = db.UserProperty()
 	song = db.StringProperty()
 	artist = db.StringProperty()
-	content = db.StringProperty(multiline=True)
+	content = db.TextProperty()
 	createDate = db.DateTimeProperty(auto_now_add=True)
 	shared = db.BooleanProperty()
 	
